@@ -58,6 +58,10 @@ retrieval_chain = RunnableParallel(
 
 # --- 3. YOUR API (No changes needed) ---
 
+@app.get("/")
+def read_root():
+    return {"Hello": "Welcome to the Gemini RAG API. Go to /docs to test."}
+
 class Query(BaseModel):
     query: str
 

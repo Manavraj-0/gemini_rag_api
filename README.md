@@ -3,6 +3,7 @@
 > A production-ready Retrieval-Augmented Generation (RAG) API that answers questions using custom knowledge bases. Built to demonstrate enterprise-grade AI/ML development skills.
 
 [![Live Demo](https://img.shields.io/badge/Demo-Live-success)](https://huggingface.co/spaces/Manavraj/gemini_rag_api)
+[![Live Demo](https://img.shields.io/badge/Demo-Live-success)](https://huggingface.co/spaces/Manavraj/gemini_rag_api)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10+-blue)](https://www.python.org/)
 
 ---
@@ -25,6 +26,8 @@ RAG (Retrieval-Augmented Generation) combines:
 - 🧠 **Semantic Search**: FAISS vector database for intelligent context retrieval
 - ⚡ **Fast Responses**: Optimized pipeline with <4s average response time
 - 🌐 **FastAPI**: Clean API with automatic interactive documentation
+- ⚡ **Fast Responses**: Optimized pipeline with <4s average response time
+- 🌐 **FastAPI**: Clean API with automatic interactive documentation
 - 🐳 **Docker Ready**: One-command deployment
 
 ---
@@ -32,6 +35,7 @@ RAG (Retrieval-Augmented Generation) combines:
 ## 🛠️ Technology Stack
 
 - **LLM**: Google Gemini 2.5 Flash
+- **Embeddings**: Google `gemini-embedding-001`
 - **Embeddings**: Google `gemini-embedding-001`
 - **Vector DB**: FAISS (CPU)
 - **Framework**: LangChain (LCEL)
@@ -45,6 +49,7 @@ RAG (Retrieval-Augmented Generation) combines:
 ### Prerequisites
 - Python 3.10+
 - Google API Key ([Get one here - Google AI Studio](https://aistudio.google.com/))
+- Google API Key ([Get one here - Google AI Studio](https://aistudio.google.com/))
 
 ### Installation
 
@@ -52,11 +57,14 @@ RAG (Retrieval-Augmented Generation) combines:
 # Clone the repository
 git clone https://github.com/Manavraj-0/gemini_rag_api.git
 cd gemini-rag-api
+git clone https://github.com/Manavraj-0/gemini_rag_api.git
+cd gemini-rag-api
 
 # Install dependencies
 pip install -r requirements.txt
 
 # Set up environment variables
+echo 'GEMINI_API_KEY="your-api-key-here"' > .env
 echo 'GEMINI_API_KEY="your-api-key-here"' > .env
 
 # Create the knowledge base
@@ -69,6 +77,8 @@ uvicorn main:app --reload
 ### Using Docker
 
 ```bash
+docker build -t gemini-rag-api .
+docker run -p 8000:8000 gemini-rag-api
 docker build -t gemini-rag-api .
 docker run -p 8000:8000 gemini-rag-api
 ```
@@ -121,6 +131,7 @@ rag_project/
 ├── main.py              # FastAPI application & RAG chain
 ├── ingest.py            # Document processing & indexing
 ├── data.txt             # Your knowledge base document (change content to explore)
+├── data.txt             # Your knowledge base document (change content to explore)
 ├── requirements.txt     # Python dependencies
 ├── Dockerfile           # Container configuration
 ├── .env                 # API keys (not committed)
@@ -159,6 +170,7 @@ text_splitter = RecursiveCharacterTextSplitter(
 ## 📊 Performance
 
 - **Average Response Time**: <4 seconds
+- **Average Response Time**: <4 seconds
 - **Embedding Model**: 768-dimensional vectors
 - **Vector Search**: FAISS L2 similarity
 - **Chunk Strategy**: 1000 chars with 100 char overlap
@@ -180,6 +192,7 @@ This project showcases:
 ## 🐛 Troubleshooting
 
 **Issue**: `API key not found`
+- **Solution**: Ensure `.env` file exists with `GEMINI_API_KEY="your-key"`
 - **Solution**: Ensure `.env` file exists with `GEMINI_API_KEY="your-key"`
 
 **Issue**: `faiss_index not found`

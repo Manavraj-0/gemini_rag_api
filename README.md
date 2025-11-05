@@ -159,7 +159,6 @@ text_splitter = RecursiveCharacterTextSplitter(
 ## 📊 Performance
 
 - **Average Response Time**: <4 seconds
-- **Average Response Time**: <4 seconds
 - **Embedding Model**: 768-dimensional vectors
 - **Vector Search**: FAISS L2 similarity
 - **Chunk Strategy**: 1000 chars with 100 char overlap

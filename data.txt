@@ -1,0 +1,9 @@
+The Iridium 9603 is a very small satellite communication module used for sending and receiving short data messages. It works through the Iridium satellite network, which covers the entire Earth — including oceans, mountains, and polar regions. Because of this, the module can be used in remote areas where there is no mobile network.
+
+One of the main advantages of the Iridium 9603 is its small size. It is one of the smallest satellite transceivers available. This makes it suitable for compact devices, portable trackers, and battery-powered equipment. It is commonly used in GPS trackers, fleet monitoring, emergency alert devices, and environmental sensors. 
+
+The device works on the Iridium Short Burst Data (SBD) service. This allows it to send small packets of data very quickly, with low delay, because the satellites are in low Earth orbit. Messages travel faster than with high-altitude satellites, making communication more responsive. 
+
+The module does not require a SIM card, and it uses simple AT commands, making it easy to integrate with microcontrollers and embedded systems. It also has a single connector for power and data control, which simplifies hardware design. It can also notify the user automatically when new messages are waiting. 
+
+The Iridium 9603 can operate in harsh conditions — from -40°C to +85°C — and works even in humid environments. It meets regulatory standards like FCC and CE, meaning it is approved for use in major regions around the world.

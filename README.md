@@ -2,7 +2,7 @@
 
 > A production-ready Retrieval-Augmented Generation (RAG) API that answers questions using custom knowledge bases. Built to demonstrate enterprise-grade AI/ML development skills.
 
-[![Live Demo](https://img.shields.io/badge/Demo-Live-success)](YOUR_HUGGINGFACE_SPACE_URL)
+[![Live Demo](https://img.shields.io/badge/Demo-Live-success)](https://huggingface.co/spaces/Manavraj/gemini_rag_api)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10+-blue)](https://www.python.org/)
 
 ---
@@ -10,8 +10,6 @@
 ## 🎯 Overview
 
 This project implements a RAG system that answers questions about custom documents using natural language. It retrieves relevant context from your documents before generating answers, ensuring responses are accurate and grounded in your data.
-
-**Built for the WebMob Technologies AI/ML Developer Trainee position**
 
 ### What is RAG?
 
@@ -25,9 +23,8 @@ RAG (Retrieval-Augmented Generation) combines:
 ## ✨ Key Features
 
 - 🧠 **Semantic Search**: FAISS vector database for intelligent context retrieval
-- ⚡ **Fast Responses**: Optimized pipeline with <2s average response time
-- 🔒 **Source Attribution**: Every answer includes source passages
-- 🌐 **RESTful API**: Clean API with automatic interactive documentation
+- ⚡ **Fast Responses**: Optimized pipeline with <4s average response time
+- 🌐 **FastAPI**: Clean API with automatic interactive documentation
 - 🐳 **Docker Ready**: One-command deployment
 
 ---
@@ -35,7 +32,7 @@ RAG (Retrieval-Augmented Generation) combines:
 ## 🛠️ Technology Stack
 
 - **LLM**: Google Gemini 2.5 Flash
-- **Embeddings**: Google `text-embedding-004`
+- **Embeddings**: Google `gemini-embedding-001`
 - **Vector DB**: FAISS (CPU)
 - **Framework**: LangChain (LCEL)
 - **API**: FastAPI + Uvicorn
@@ -47,20 +44,20 @@ RAG (Retrieval-Augmented Generation) combines:
 
 ### Prerequisites
 - Python 3.10+
-- Google API Key ([Get one here](https://aistudio.google.com/))
+- Google API Key ([Get one here - Google AI Studio](https://aistudio.google.com/))
 
 ### Installation
 
 ```bash
 # Clone the repository
-git clone <your-repo-url>
-cd rag_project
+git clone https://github.com/Manavraj-0/gemini_rag_api.git
+cd gemini-rag-api
 
 # Install dependencies
 pip install -r requirements.txt
 
 # Set up environment variables
-echo 'GOOGLE_API_KEY="your-api-key-here"' > .env
+echo 'GEMINI_API_KEY="your-api-key-here"' > .env
 
 # Create the knowledge base
 python ingest.py
@@ -72,8 +69,8 @@ uvicorn main:app --reload
 ### Using Docker
 
 ```bash
-docker build -t rag-api .
-docker run -p 8000:8000 rag-api
+docker build -t gemini-rag-api .
+docker run -p 8000:8000 gemini-rag-api
 ```
 
 ---
@@ -123,7 +120,7 @@ curl -X POST "http://localhost:8000/ask" \
 rag_project/
 ├── main.py              # FastAPI application & RAG chain
 ├── ingest.py            # Document processing & indexing
-├── data.txt             # Your knowledge base document
+├── data.txt             # Your knowledge base document (change content to explore)
 ├── requirements.txt     # Python dependencies
 ├── Dockerfile           # Container configuration
 ├── .env                 # API keys (not committed)
@@ -161,7 +158,7 @@ text_splitter = RecursiveCharacterTextSplitter(
 
 ## 📊 Performance
 
-- **Average Response Time**: <2 seconds
+- **Average Response Time**: <4 seconds
 - **Embedding Model**: 768-dimensional vectors
 - **Vector Search**: FAISS L2 similarity
 - **Chunk Strategy**: 1000 chars with 100 char overlap
@@ -183,7 +180,7 @@ This project showcases:
 ## 🐛 Troubleshooting
 
 **Issue**: `API key not found`
-- **Solution**: Ensure `.env` file exists with `GOOGLE_API_KEY="your-key"`
+- **Solution**: Ensure `.env` file exists with `GEMINI_API_KEY="your-key"`
 
 **Issue**: `faiss_index not found`
 - **Solution**: Run `python ingest.py` first to create the index
@@ -193,19 +190,7 @@ This project showcases:
 
 ---
 
-## 📝 License
-
-This project is licensed under the MIT License.
-
----
-
 ## 👤 Contact
 
-**Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your Profile](https://linkedin.com/in/yourprofile)
-- Email: your.email@example.com
-
----
-
-**Built with ❤️ for WebMob Technologies AI/ML Developer Trainee Position**
+- GitHub: [@Manavraj-0](https://github.com/Manavraj-0)
+- LinkedIn: [Manav Rajvansh](https://linkedin.com/in/meet-manav-rajvansh)

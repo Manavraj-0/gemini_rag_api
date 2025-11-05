@@ -1,12 +1,3 @@
----
-title: RAG Q&A API
-emoji: 🤖
-colorFrom: blue
-colorTo: green
-sdk: docker
-app_port: 8000
----
-
 # 🤖 RAG Q&A API - Intelligent Document Query System
 
 > A production-ready Retrieval-Augmented Generation (RAG) API that answers questions using custom knowledge bases. Built to demonstrate enterprise-grade AI/ML development skills.

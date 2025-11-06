@@ -11,3 +11,4 @@ __pycache__/
 # IDE / OS files
 .vscode/
 .DS_Store
+READ.md

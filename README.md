@@ -2,9 +2,8 @@
 
 > A production-ready Retrieval-Augmented Generation (RAG) API that answers questions using custom knowledge bases. Built to demonstrate enterprise-grade AI/ML development skills.
 
-[![Live Demo](https://img.shields.io/badge/Demo-Live-success)](https://huggingface.co/spaces/Manavraj/gemini_rag_api)
-[![Python 3.10+](https://img.shields.io/badge/Python-3.10+-blue)](https://www.python.org/)
-
+[![Live Demo](https://img.shields.io/badge/Demo-Live-success)](https://manavraj-gemini-rag-api.hf.space/)
+[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Space-yellow)](https://huggingface.co/spaces/Manavraj/gemini_rag_api)
 ---
 
 ## 🎯 Overview
